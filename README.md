@@ -19,21 +19,25 @@ Usage: -F CombineVariants –R ref.fasta –variant1 input1.vcf –variant2 inpu
 -variant1: input variant file 1 (in vcf foramt)
 -variant2: input variant file 2 (in vcf foramt)
 -O: output the combined variant call file in vcf format
+  
 2.	SelectGenotype: Select homozygous or heterozygous variants in the variant call file provided by the users.
 Usage: -F SelectGenotype –genotype homo[heter] –variants input.vcf –O output.vcf
 -genotype: Specify the genotype of the variants (homozygous/ heterozygous variants)
 -variants: input the variants in vcf format
 -O: output the specified genotype variants in vcf format
+  
 3.	RemoveOverlaps : Remove overlapping variants in variant call file
 Usage: -F RemoveOverlaps –R ref.fasta –variants input.vcf –O output.vcf
 –R: input the reference genome file
 -variants: input the variant in vcf format
 -O: output the duplicated variant in vcf format
+  
 4.	SortVariants: Sort variants according to the reference genome
 Usage: -F SortVariants –R ref.fasta –variants input.vcf –O output.vcf
 –R: input the reference genome file
 -variants: input the variant in vcf format
 -O: output the sorted variant in vcf format
+  
 5.	MakePersonalizedReference: Generate personalized reference genome according to the germline mutations provided by the users. 
 Usage: -F MakePersonalizedReference –I ref.fasta –germlinemutations input.vcf –O output.fa [–intervals input.intervals] [-genotype home/ heter]
 –I: input the reference genome file
@@ -42,6 +46,7 @@ Usage: -F MakePersonalizedReference –I ref.fasta –germlinemutations input.vc
 Options: 
 -intervals: specify the region of variants 
 -genotype: specify the genotype of variants
+  
 6.	MakePersonalizedVariants: Generate personalized vcf files according to the germline mutations provided by the users. 
 Usage: -F MakePersonalizedVariants –I input.vcf –O output.vcf –variants variant.vcf [–intervals input.intervals] [-genotype home/ heter] [-removeduplicates]
 -I: input the variants in vcf format
@@ -51,6 +56,7 @@ Options:
 -intervals: specify the region of variants 
 -genotype: specify the genotype of variants
 -removeduplicates: remove duplicated variants
+  
 7.	MapVariants: Map the variants from being mapped to the personalized reference genome to being mapped to the universal reference genome.
 Usage: -F MapVariants –R ref.fasta –I input.vcf –O output.vcf –germlinemutations variant.vcf [–intervals input.intervals] [-genotype home/ heter] [-removeduplicates]
 –R: input the universal reference genome file
@@ -61,6 +67,7 @@ Options:
 -intervals: specify the region of variants 
 -genotype: specify the genotype of variants
 -removeduplicates: remove duplicated variants
+  
 8.	ReplaceGenotype: Replacing alternative alleles with reference bases according to the heterozygous variants provided by the users. 
 Usage: -F ReplaceGenotype –R ref.fasta –I input.sam –germlinemutations germlinemutations.vcf –O output.sam –readlength len [-genotype home/ heter] [–intervals input.intervals]
 –R: input the reference genome file
