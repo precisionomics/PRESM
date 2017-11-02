@@ -30,7 +30,7 @@ Usage: -F SelectGenotype –genotype homo[heter] –variants input.vcf –O outp
 -variants: input the variants in vcf format
 -O: output the specified genotype variants in vcf format
 
-RemoveOverlaps : Remove overlapping variants in variant call file
+RemoveOverlaps : Remove overlapping variants in variant call file 
 Usage: -F RemoveOverlaps –R ref.fasta –variants input.vcf –O output.vcf
 –R: input the reference genome file
 -variants: input the variant in vcf format
