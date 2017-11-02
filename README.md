@@ -91,4 +91,4 @@ Usage: -F ViewFasta –R ref.fasta [–L input.list] [-region specified region]
 Example of region specifications format:
 chr1          Output whole sequence of chromosome 1 in the reference genome.
 chr2:5000     Output the chromosome 2 sequence which begins at base position 5000 and ends at the end of chromosome 2.
-chr3:500-600   Output the chromosome 3 sequence which begins at base position 500 and ends at base position 600 of chromosome 3.
+chr3:500-600   Output the chromosome 3 sequence which begins at base position 500 and ends at base position 600 of chromosome 3. 
