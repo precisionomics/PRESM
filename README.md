@@ -31,6 +31,16 @@ Parameters:
 * -variant2: input variant file 2 (in vcf foramt)
 * -O: output the combined variant call file in vcf format
 
+**SelectGenotype: Select homozygous or heterozygous variants in the variant call file provided by the users.**
+```
+> -F SelectGenotype –genotype homo[heter] –variants input.vcf –O output.vcf
+```
+Parameters: 
+* -genotype: Specify the genotype of the variants (homozygous/
+heterozygous variants)
+* -variants: input the variants in vcf format
+* -O: output the specified genotype variants in vcf format
+
 
 ### Contacts
 * Chen Cao, chen.cao@ucalgary.ca
