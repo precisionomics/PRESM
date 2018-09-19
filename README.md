@@ -63,8 +63,7 @@ Parameters:
 
 
 
-**MakePersonalizedReference: Generate personalized reference
-genome according to the germline mutations provided by the users.**
+**MakePersonalizedReference: Generate personalized reference genome according to the germline mutations provided by the users.**
 ```
 > -F MakePersonalizedReference –I ref.fasta –germlinemutations input.vcf –O output.fa [–intervals input.intervals] [-genotype home/ heter]
 ```
@@ -80,9 +79,7 @@ Options:
 **MakePersonalizedVariantsDB: Generate personalized variants database files according to the germline mutations provided by the
 users.**
 ```
-> -F MakePersonalizedVariants –I input.vcf –O output.vcf –variants
-variant.vcf [–intervals input.intervals] [-genotype home/ heter]
-[-removeduplicates]
+> -F MakePersonalizedVariants –I input.vcf –O output.vcf –variants variant.vcf [–intervals input.intervals] [-genotype home/ heter] [-removeduplicates]
 ```
 Parameters: 
 * -I: input the variants database in vcf format
@@ -93,6 +90,54 @@ Options:
 * -intervals: specify the region of variants
 * -genotype: specify the genotype of variants
 * -removeduplicates: remove duplicated variants
+
+
+**MapVariants: Map the personalized reference genome-based coordinates of the variants to their corresponding coordinates in the universal reference genome.**
+```
+> -F MapVariants –R ref.fasta –I input.vcf –O output.vcf –germlinemutations variant.vcf [–intervals input.intervals] [-genotype home/heter] [-removeduplicates]
+```
+Parameters: 
+* –R: input the universal reference genome file
+* -I: input the somatic mutations in vcf format
+* -O: output the somatic mutations being mapped to the universal reference genome in vcf format
+* -germlinemutations: input the germline mutations in vcf format
+
+Options:
+* -intervals: specify the region of variants
+* -genotype: specify the genotype of variants
+* -removeduplicates: remove duplicated variants
+
+
+**ReplaceGenotype: Replacing the alternative alleles in the sequencing reads with reference bases according to the heterozygous variants provided by the users.**
+```
+> -F ReplaceGenotype –I input.sam –germlinemutations germlinemutations.vcf –O output.sam –readlength len [–intervals input.intervals] [-genotype home/ heter]
+```
+Parameters: 
+* -I: input the sequence alignment map file in sam format
+* -variant: input the germline mutations in vcf format
+* -O: output the replaced sequence alignment map file in sam format
+* –readlength: the sequencing read length
+
+Options:
+* -intervals: specify the region of variants
+* -genotype: specify the genotype of variants
+
+**ViewFasta: View specified region of sequence in reference genome.**
+```
+> Usage: -F ViewFasta –R ref.fasta [–L input.list] [-region specified region]
+```
+Parameters: 
+* –R: input the reference genome file
+* -L: input the specified region list file, this function was used for viewing multiple regions in the chromosome
+* -region: input one specified region, this function was used for viewing single region in the chromosome
+
+Example of region specifications format:
+
+chr1 Output whole sequence of chromosome 1 in the reference genome.
+
+chr2:5000 Output the chromosome 2 sequence which begins at base position 5000 and ends at the end of chromosome 2.
+
+chr3:500-600 Output the chromosome 3 sequence which begins at base position 500 and ends at base position 600 of chromosome 3.
 
 ### Contacts
 * Chen Cao, chen.cao@ucalgary.ca
