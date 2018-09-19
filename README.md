@@ -1,16 +1,13 @@
-# OCMA
+# PRESM
 
-OCMA User’s Manual r0.1
-July 17, 2018
-
-OCMA factorizes very large matrices using disk-based out-of-core technology and Intel Math Kernel Library (Intel MKL), and it adopts the technology of memory-mapped file I/O.
+PRESM User’s Manual r0.1
+Sep 16, 2018
+PRESM stands for Personalized Reference Editor for Somatic Mutation discovery. In contrast to other reference genome editor software that generate a diploid reference genome which may distribute the reads to two site, impairing the soundness of the downstream statistical framework, PRESM provides two haploid reference genomes. The pipeline of PRESM involves three steps: First, germline mutations are discovered by another tool, e.g., GATK, and are used to make personalized references to call somatic mutations. Second, a reference genome composed of all personal variants (including both heterozygous and homozygous sites) is used as “decoy” to capture the heterozygous variants in reads. Third, PRESM changes the reads by replacing all heterozygous alleles with the corresponding reference alleles and maps the modified reads back to another personalized reference genome that contains only homozygous changes. The output of this step is a BAM file ready for any somatic mutation callers to use. We intend to offer long-term maintenance for PRESM and continue adding our new functions into it.
 
 ### Installation
 
-After downloading, the users will see two files: ocma-0.1.zip is for Windows system ocma-0.1.tar.gzis for Linux/Unix system.
-After decompression, one will see two folders: src and bin. The folder src contains all the source code, and the folder bin contains the compiled binary executable. Under the folder bin, two small matrices, SM10 and M3_4 for testing purpose are also provided. 
-The program is written in the C language, and it uses Intel Math Kernel Library. So, in order to compile the source code, one needs to install C compiler, e.g., the Intel C/C++ Compilers, the GNU C Compiler or Visual Studio C Compiler. Additionally, one needs to install Intel MKL.
-When C compiler and MKL are available in the system, one can enter the src folder and modify the makefile based on the C compiler and the MKL paths; then type make or nmake to compile. After that, the ocma executable will be generated in the bin folder. 
+PRESM is a batteries-included JAR executable; therefore no installation is needed. Please copy the executable presm.jar and run it using the standard command for java package:
+java [–Xmx] –jar presm.jar
 
 ### Usage
 
