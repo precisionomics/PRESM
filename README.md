@@ -41,6 +41,25 @@ heterozygous variants)
 * -variants: input the variants in vcf format
 * -O: output the specified genotype variants in vcf format
 
+**RemoveOverlaps : Remove overlapping variants in a variant call file.**
+```
+> -F RemoveOverlaps –R ref.fasta –variants input.vcf –O output.vcf
+```
+Parameters: 
+* –R: input the reference genome file
+* -variants: input the variant in vcf format
+* -O: output the duplicated variant in vcf format
+
+
+**SortVariants: Sort variants according to the reference genome coordinates.**
+```
+> -F SortVariants –R ref.fasta –variants input.vcf –O output.vcf
+```
+Parameters: 
+* –R: input the reference genome file
+* -variants: input the variant in vcf format
+* -O: output the sorted variant in vcf format
+
 
 ### Contacts
 * Chen Cao, chen.cao@ucalgary.ca
