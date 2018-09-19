@@ -20,21 +20,16 @@ reference genome.
 All the functions are used as:
 java [-Xmx] –jar /path/to/presm.jar <options>
   
-* CombineVariants: Combine two variant call files according to the reference genome.
-Usage: -F CombineVariants –R ref.fasta –variant1 input1.vcf –variant2 input2.vcf –O output.vcf
-–R: input the reference genome file
--variant1: input variant file 1 (in vcf foramt)
--variant2: input variant file 2 (in vcf foramt)
--O: output the combined variant call file in vcf format
-
-* SelectGenotype: Select homozygous or heterozygous variants in the
-variant call file provided by the users.
-Usage: -F SelectGenotype –genotype homo[heter] –variants input.vcf –O
-output.vcf
--genotype: Specify the genotype of the variants (homozygous/
-heterozygous variants)
--variants: input the variants in vcf format
--O: output the specified genotype variants in vcf format
+  
+**CombineVariants: Combine two variant call files according to the reference genome.**
+```
+> -F CombineVariants –R ref.fasta –variant1 input1.vcf –variant2 input2.vcf –O output.vcf
+```
+Parameters: 
+* –R: input the reference genome file. 
+* -variant1: input variant file 1 (in vcf foramt)
+* -variant2: input variant file 2 (in vcf foramt)
+* -O: output the combined variant call file in vcf format
 
 
 ### Contacts
