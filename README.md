@@ -64,7 +64,7 @@ Note:
 For all file names, the file path must be specified if the file in question is not present in the current working directory.
 
 ### Contacts
-* Chen Cao Xiong, chen.cao@ucalgary.ca
+* Chen Cao, chen.cao@ucalgary.ca
 * Quan Long, quan.long@ucalgary.ca
 
 ### Copyright License (MIT Open Source)
