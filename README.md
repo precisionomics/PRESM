@@ -15,59 +15,11 @@ java [–Xmx] –jar presm.jar
 reference genome.
 * Replacing the alternative alleles with reference bases according to the heterozygous variants provided by the users.
 
-### Usage
+### Commands and options
 
-**Eigen-decomposition for Symmetric Matrices** 
-```
-> ocma eigen disk/memory n A E Q
-```
-Parameters: 
-* disk/memory: Specifies whether using disk or memory. 
-* n (input): The row number and column number of matrix A.
-* A (input): The filename of the file that stores matrix A. The size of the file should be n*n*sizeof(float).
-* E (output): The filename of the file that stores the eigenvalues of matrix A. The file size is n*sizeof(float).
-* Q (output): The filename of the file that stores the eigenvectors of matrix A. The file size is n*n*sizeof(float).
+All the functions are used as:
+java [-Xmx] –jar /path/to/presm.jar <options>
 
-**Singular Value Decomposition**
-```
-> ocma singular disk/memory m n A S U V
-```
-Parameters: 
-* disk/memory: Specifies whether using disk or memory. 
-* m (input): The row number of matrix A.
-* n (input): The column number of matrix A.
-* A (input): The filename of the file that stores matrix A. The size of the file should be m*n*sizeof(float).
-* S (output): The filename of the file that stores the singular values of matrix A. The size of the file is min(m,n)*sizeof(float).
-* U (output): The filename of the file that stores the left-singular vectors of matrix A. The size of the file is m*min(m,n)*sizeof(float).
-* V (output): The filename of the file that stores the right-singular vectors of matrix A. The size of the file is n*min(m,n)*sizeof(float).
-
-**Part Singular Value Decomposition**
-```
-> ocma singularpart disk/memory m n k A S U V
-```
-Parameters: 
-* disk/memory: Specifies whether using disk or memory. 
-* m (input): The row number of matrix A.
-* n (input): The column number of matrix A.
-* k (input): The number of singular values. k <= min(m,n) is required. 
-* A (input): The filename of the file that stores matrix A. The size of the file should be m*n*sizeof(float).
-* S (output): The filename of the file that stores the singular values of matrix A. The size of the file is k*sizeof(float).
-* U (output): The filename of the file that stores the left-singular vectors of matrix A. The size of the file is m*k*sizeof(float).
-* V (output): The filename of the file that stores the right-singular vectors of matrix A. The size of the file is n*k*sizeof(float).
-
-**Matrix Format Conversion**
-```
-> ocma format txt2bin/bin2txt m n A B
-```
-Parameters: 
-* txt2bin/bin2txt: Specifies to convert text to binary format or in reverse. 
-* m (input): The row number of matrix A.
-* n (input): The column number of matrix A.
-* A (input): The filename of the file that stores matrix A in text/binary format.
-* B (output): The filename of the file that stores the matrix in binary/text format.
-
-Note: 
-For all file names, the file path must be specified if the file in question is not present in the current working directory.
 
 ### Contacts
 * Chen Cao, chen.cao@ucalgary.ca
