@@ -4,7 +4,7 @@ PRESM stands for Personalized Reference Editor for Somatic Mutation discovery. I
 
 ### Installation
 
-PRESM is a batteries-included JAR executable; therefore no installation is needed. Please copy the executable presm.jar and run it using the standard command for java package:
+PRESM is a batteries-included JAR executable; therefore no installation is needed. Please copy the executable presm.jar and run it using the standard command for java package:\n
 java [–Xmx] –jar presm.jar
 
 ### Usage
