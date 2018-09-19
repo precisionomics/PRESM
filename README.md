@@ -133,11 +133,25 @@ Parameters:
 
 Example of region specifications format:
 
-chr1 Output whole sequence of chromosome 1 in the reference genome.
+chr1: Output whole sequence of chromosome 1 in the reference genome.
 
-chr2:5000 Output the chromosome 2 sequence which begins at base position 5000 and ends at the end of chromosome 2.
+chr2: 5000 Output the chromosome 2 sequence which begins at base position 5000 and ends at the end of chromosome 2.
 
-chr3:500-600 Output the chromosome 3 sequence which begins at base position 500 and ends at base position 600 of chromosome 3.
+chr3: 500-600 Output the chromosome 3 sequence which begins at base position 500 and ends at base position 600 of chromosome 3.
+
+**SomaticMutationsOnGermlineInsertion: Output the relative coordinate of somatic mutations located on germline insertions.**
+```
+> -F SomaticMutationsOnGermlineInsertion –germlinemutations germlinemutation.vcf –I input.vcf –O output.txt [–intervals input.intervals] [-genotype home/ heter]
+```
+Parameters: 
+* -germlinemutations: input the germline mutations in vcf format
+* -I: input the somatic mutations (using personalized coordinate system) in vcf formait
+* -O: output the locations of somatic mutations on germline insertions
+
+Options:
+
+* -intervals: specify the region of variants
+* -genotype: specify the genotype of variants
 
 ### Contacts
 * Chen Cao, chen.cao@ucalgary.ca
