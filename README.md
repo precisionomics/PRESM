@@ -72,6 +72,8 @@ Parameters:
 * –I: input the reference genome file
 * -germlinemutations: input the germline mutations in vcf format
 * -O: output the personalized reference genome in fasta format
+```
+```
 Options:
 * -intervals: specify the region of variants
 * -genotype: specify the genotype of variants
