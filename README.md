@@ -77,6 +77,23 @@ Options:
 * -intervals: specify the region of variants
 * -genotype: specify the genotype of variants
 
+**MakePersonalizedVariantsDB: Generate personalized variants database files according to the germline mutations provided by the
+users.**
+```
+> -F MakePersonalizedVariants –I input.vcf –O output.vcf –variants
+variant.vcf [–intervals input.intervals] [-genotype home/ heter]
+[-removeduplicates]
+```
+Parameters: 
+* -I: input the variants database in vcf format
+* -O: output the personalized variants database in vcf format
+* -variants: input the mutations in vcf format
+
+Options:
+* -intervals: specify the region of variants
+* -genotype: specify the genotype of variants
+* -removeduplicates: remove duplicated variants
+
 ### Contacts
 * Chen Cao, chen.cao@ucalgary.ca
 * Quan Long, quan.long@ucalgary.ca
