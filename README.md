@@ -94,10 +94,9 @@ Options:
 
 **MapVariants: Map the personalized reference genome-based coordinates of the variants to their corresponding coordinates in the universal reference genome.**
 ```
-> -F MapVariants –R ref.fasta –I input.vcf –O output.vcf –germlinemutations variant.vcf [–intervals input.intervals] [-genotype home/heter] [-removeduplicates]
+> -F MapVariants –I input.vcf –O output.vcf –germlinemutations variant.vcf [–intervals input.intervals] [-genotype home/heter] [-removeduplicates]
 ```
 Parameters: 
-* –R: input the universal reference genome file
 * -I: input the somatic mutations in vcf format
 * -O: output the somatic mutations being mapped to the universal reference genome in vcf format
 * -germlinemutations: input the germline mutations in vcf format
